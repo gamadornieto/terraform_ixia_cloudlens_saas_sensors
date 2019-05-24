@@ -9,7 +9,7 @@ Create a Cloudlens project in https://www.ixia-sandbox.cloud as shown in Cloudle
 # Update the following variables
 
 terraform_credentials/credentials.tfvars
-    # AWS Provider info
+    --- AWS Provider info
     private_key_path = <PATH_TO_YOUR_SSH_PRIVATE_KEY>
     key_name = <YOUR_SSH_KEY_NAME_IN_AWS>
     aws_access_key_id = "THE_KEY"
@@ -22,17 +22,19 @@ CL_Demo_Terraform/CL_project.tfvars
 # Commands to run
  cd scripts
  terraform init
- # Deploy infrastructure
+
+# Deploy infrastructure
  terraform.exe apply --var-file="..\terraform_credentials\credentials.tfvars" --var-file=".\CL_Demo_Terraform\CL_project.tfvars"
- # If you want to scale the VMs, just edit the following variables
- #  CL_Demo_Terraform/CL_project.tfvars
- #     
- #    num_web_srv = 1
- #    num_db = 2
- #
- # and redeploy
- terraform.exe apply --var-file="..\terraform_credentials\credentials.tfvars" --var-file=".\CL_Demo_Terraform\CL_project.tfvars"
- # Delete infrastructure
+
+ If you want to scale the VMs, just edit the following variables:
+   CL_Demo_Terraform/CL_project.tfvars
+
+     num_web_srv = 1
+     num_db = 2
+
+  and redeploy
+    terraform.exe apply --var-file="..\terraform_credentials\credentials.tfvars" --var-file=".\CL_Demo_Terraform\CL_project.tfvars"
+# Delete infrastructure
 terraform.exe destroy --var-file="..\terraform_credentials\credentials.tfvars" --var-file=".\CL_Demo_Terraform\CL_project.tfvars" --force
 
 ## License
