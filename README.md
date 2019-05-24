@@ -9,14 +9,20 @@ Create a Cloudlens project in https://www.ixia-sandbox.cloud as shown in Cloudle
 # Update the following variables
 
 terraform_credentials/credentials.tfvars
+
     --- AWS Provider info
     private_key_path = <PATH_TO_YOUR_SSH_PRIVATE_KEY>
+
     key_name = <YOUR_SSH_KEY_NAME_IN_AWS>
+
     aws_access_key_id = "THE_KEY"
+
     aws_secret_access_key = "THE_KEY"
+
     aws_session_token = "THE_KEY"
 
 CL_Demo_Terraform/CL_project.tfvars
+
     CL_project_key = <YOUR_CLOUDLENS_PROJECT_KEY>
 
 # Commands to run
