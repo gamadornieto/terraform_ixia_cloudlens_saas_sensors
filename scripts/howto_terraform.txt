@@ -1,0 +1,4 @@
+#Deploy
+terraform.exe apply --var-file="..\terraform_credentials\terraform_gustavo.tfvars" --var-file=".\CL_Demo_Terraform\CL_project.tfvars"
+#Destroy
+terraform.exe destroy --var-file="..\terraform_credentials\terraform_gustavo.tfvars" --var-file=".\CL_Demo_Terraform\CL_project.tfvars" --force
